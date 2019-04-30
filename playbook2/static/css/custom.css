@@ -1,0 +1,234 @@
+.topHeader{
+  height: 60px;
+  width: 100%;
+  background-color: #0a3157;
+  margin: 0;
+  border-radius: 0px;
+}
+
+.title{
+  align-items: center;
+  width: 190px;
+  height: 80px;
+  color: white;
+  padding-top: 10px;
+  padding-left: 30px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.login{
+  float: right;
+  padding-top: 25px;
+  padding-right: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.floatleft{
+
+}
+
+.floatright{
+
+}
+
+.playbooklogo{
+  float:left;
+  margin: 0;
+}
+
+.navitems{
+  padding-top: 20px;
+  float:right;
+  height: 80px;
+  font-size: 15pt;
+}
+
+.gamecontroller{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+
+.controller-imageForm{
+  width: 100px;
+  height: auto;
+  padding-top: 30px;
+  margin-left: 46%;
+  margin-right: 35%;
+}
+
+.clear{
+  clear: both;
+}
+
+.customnav{
+  width: 100%;
+  height: 50px;
+  margin: 0;
+}
+
+.navtext{
+  display: inline-block;
+  font-size: 15pt;
+}
+
+.background-image {
+  height: 500px;
+  background-image: url("../images/poly.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.customblue{
+  background-color: #0a3157;
+}
+
+.body-text{
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 40px;
+  text-align: center;
+}
+
+.signup-btn{
+  position: relative;
+  top: 110px;
+  left: 47%;
+  background-color: #0a3157;
+}
+
+.submit-btn{
+  background-color: #0a3157;
+}
+
+.registration-form{
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.form-spacing{
+  width: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin: 0 auto
+}
+
+.space{
+  height: 75px;
+}
+
+.event-text{
+  padding-top: 40px;
+  text-align: center;
+  color: #0a3157;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.football:hover .overlay {
+  opacity: 1;
+}
+
+.football:hover .football-image {
+  opacity: 0.5;
+}
+
+.controller:hover .overlay {
+  opacity: 1;
+}
+
+.controller:hover .controller-image {
+  opacity: 0.5;
+}
+
+.dice:hover .overlay {
+  opacity: 1;
+}
+
+.dice:hover .dice-image {
+  opacity: 0.5;
+}
+
+.overlay-text {
+  color: #0a3157;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.event-menu{
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.left-side{
+  border: 5px solid #0a3157;
+  background-color: #396982;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  color: #F2F9FF;
+}
+
+.right-side{
+  float: right;
+  padding: 10px;
+  width: 80%;
+}
+
+.event-post{
+  border: 5px solid #0a3157;
+  padding: 10px;
+  width: 475px !important;
+  height: 250px;
+  background-color: #396982;
+  color: #F2F9FF;
+}
+
+.left-side{
+  margin-right: 15px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 475px 475px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.myContainer {
+  padding: 10px;
+}

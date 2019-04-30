@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+<link rel="stylesheet" href="{{=URL('static', 'css/stupid.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/custom.css')}}">
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
+
+<div class="background-image">
+  <div class="body-text">
+    <h1>Welcome to Playbook!</h1>
+    <p style="text-align: center;">
+      Playbook is an online event organizer that caters to game enthusiasts.
+    </p>
+  </div>
+  <button type="submit" onclick="location.href='{{=URL('default', 'user/profile')}}'" class="btn-lg btn-success signup-btn">Sign In</button>
+</div>

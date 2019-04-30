@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div class="topHeader">
+      <h1 class="title">Playbook</h1>
+      <img class="gamecontroller" src="{{=URL('static', 'images/controller.png')}}">
+      <form class="form-inline login">
+        <div class="form-group">
+          <input type="email" class="form-control" id="LogInEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="LogInPassword" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-success">Log in</button>
+      </form>
+    </div>
+  </body>
+  {{extend 'navbar.html'}}
+
+  {{include}}
+
+</html>

@@ -1,0 +1,121 @@
+{{extend 'layout.html'}}
+<link rel="stylesheet" href="{{=URL('static', 'font-awesome-4.6.3/css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/stupid.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/custom.css')}}">
+
+{{block head}}
+<script src="{{=URL('static', 'js/vue.js')}}"></script>
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
+<script>
+    var add_post_url = "{{=URL('api', 'add_post', user_signature=True)}}";
+    var get_post_list_url = "{{=URL('api', 'get_post_list')}}";
+    var get_events_list_url = "{{=URL('api', 'get_events_list')}}";
+    var edit_post_url = "{{=URL('api', 'edit_post', user_signature=True)}}";
+
+    // Reply callbacks.
+    var add_reply_url = "{{=URL('api', 'add_reply', user_signature=True)}}";
+    var get_reply_list_url = "{{=URL('api', 'get_reply_list')}}";
+    var edit_reply_url = "{{=URL('api', 'edit_reply', user_signature=True)}}";
+
+    // Thumb callbacks.
+    var set_thumb_url = "{{=URL('api', 'set_thumb', user_signature=True)}}";
+
+    // Like callbacks.
+    var set_like_url = "{{=URL('api', 'set_like', user_signature=True)}}";
+    var get_likers_url = "{{=URL('api', 'get_likers')}}"
+
+    // Stars.
+    var set_stars_url = "{{=URL('api', 'set_stars', user_signature=True)}}";
+
+    // Authentication
+    var curr_user_email = "{{=None if auth.user is None else auth.user.email}}";
+    var curr_user_first_name = "{{=None if auth.user is None else auth.user.first_name}}";
+    var is_logged_in = {{='false' if auth.user is None else 'true'}};
+
+
+    var add_event_url = "{{=URL('api', 'add_event', user_signature=True)}}";
+
+
+    var get_sports_events_list_url = "{{=URL('api', 'get_sports_events_list', user_signature=True)}}";
+    var get_board_events_list_url = "{{=URL('api', 'get_board_events_list', user_signature=True)}}";
+    var get_video_events_list_url = "{{=URL('api', 'get_video_events_list', user_signature=True)}}";
+
+
+</script>
+{{end}}
+
+<div class="event-menu">
+  <div id="vue-div" class="display:none">
+    <div v-show="display_event_form">
+        <div id="add_event" style="">
+          <div class="container form_row">
+            <div class="label quarter">
+              Title:
+            </div>
+            <div class="form threequarters">
+              <input v-model="event_form_title" placeholder="Enter your event name"/>
+              <textarea v-model="event_form_content" placeholder="Enter your event description"></textarea>
+
+              <input type="radio" id="one" value="Sports" v-model="event_form_category">
+              <label for="one">Sports</label>
+              <br>
+              <input type="radio" id="two" value="Video Games" v-model="event_form_category">
+              <label for="two">Video Games</label>
+              <br>
+              <input type="radio" id="three" value="Board Games" v-model="event_form_category">
+              <label for="one">Board Games</label>
+            </div>
+          </div>
+          <div class="container form_row"><div class="quarter"></div>
+            <div class="threequarters">
+              <div class="submit">
+                <button id="add-event" v-on:click="add_event(); toggle_form();">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+  <div class="left-side">
+    <h1>Search:</h1>
+    <input class="form-control" type="text" name="search">
+    <button class="btn-sm btn-block btn-success submit-btn" type="submit">Submit</button>
+    <br/>
+    <h2>Categories:</h2>
+    <input type="checkbox" name="category-sports">
+    <label for="category-sports">Sports</label> <br />
+    <input type="checkbox" name="category-videogames">
+    <label for="category-videogames">Video Games</label> <br />
+    <input type="checkbox" name="category-boardgames">
+    <label for="category-boardgames">Board Games</label>
+    <br/>
+    <br/>
+    <button v-if="is_logged_in" v-show="!display_event_form" v-on:click="toggle_form()">Create New Event</button>
+  </div>
+  <div class="right-side">
+    <div class="event-post" v-for="event in board_event_list">
+
+        <div class="event_content">
+          <h4> ${event.event_title} </h4>
+          <h5> ${event.event_content} </h5>
+          <h5> Cateogry: ${event.event_category} </h5>
+          <br/>
+          <h5> Posted By: ${event.creator_name} </h5>
+          <h6>Rating: -10 <i class="fa fa-thumbs-down" style="color: white"></i></h6>
+          <button onclick="myFunction()" >Contact</button>
+
+
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+  </div>

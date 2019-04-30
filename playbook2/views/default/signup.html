@@ -1,0 +1,109 @@
+{{extend 'layout.html'}}
+
+<link rel="stylesheet" href="{{=URL('static', 'css/stupid.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{=URL('static', 'css/custom.css')}}">
+<script src="{{=URL('static', 'js/default_index.js')}}"></script>
+
+<form id="registration-info" method="POST">
+  <div class="registration-form">
+    <img class="controller-imageForm" src="{{=URL('static', 'images/category_controller.png')}}">
+    <h1 style="text-align: center;">Registration Form</h1>
+    <p style="text-align: center;">Please fill out information regarding your new Playbook account</p>
+    <div class="form-spacing">
+      <div class="row space">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" name="userFirstName" placeholder="Enter First Name">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" name="userLastName" placeholder="Enter Last Name">
+          </div>
+        </div>
+      </div>
+      <div class="row space">
+        <div class="col-md-12">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" name="userEmail" placeholder="Enter Email">
+        </div>
+      </div>
+      <div class="row space">
+        <div class="col-md-6 mb-3">
+            <label for="birthmonth">Birthday</label>
+            <select class="custom-select d-block w-100" name="userBirthmonth">
+                <option value="">Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="birthday">Day</label>
+            <input type="text" class="form-control" name="userBirthday" id="birthday">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="birthyear">Year</label>
+            <input type="text" class="form-control" name="userBirthyear" id="birthyear">
+        </div>
+      </div>
+      <div class="row space">
+        <div class="col-md-12 mb-3">
+            <label for="university">University</label>
+            <select class="custom-select d-block w-100" name="userUniversity">
+                <option value="">Choose...</option>
+                <option>UC Berkeley</option>
+                <option>UC Davis</option>
+                <option>UC Irvine</option>
+                <option>UCLA</option>
+                <option>UC Riverside</option>
+                <option>UC San Francisco</option>
+                <option>UC Santa Barbara</option>
+                <option>UC Santa Cruz</option>
+            </select>
+        </div>
+      </div>
+      <div class="row space">
+        <div class="col-md-5 mb-3">
+            <label for="country">Country</label>
+            <select class="custom-select d-block w-100" name="userCountry">
+                <option value="">Choose...</option>
+                <option>United States</option>
+            </select>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="state">State</label>
+            <select class="custom-select d-block w-100" name="userState">
+                <option value="">Choose...</option>
+                <option>California</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" name="userZip" id="zip">
+        </div>
+      </div>
+      <div class="row space">
+        <div class="col-md-12">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="userPassword" placeholder="Enter Password">
+        </div>
+      </div>
+
+      <button class="btn-lg btn-block btn-success submit-btn" type="submit">Submit</button>
+
+    </div>
+  </div>
+</form>
